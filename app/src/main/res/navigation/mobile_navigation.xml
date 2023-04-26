@@ -15,5 +15,10 @@
         android:name="ru.mirea.petukhov.a.mireaproject.WebViewFragment"
         android:label="fragment_web_view"
         tools:layout="@layout/fragment_web_view" />
+    <fragment
+        android:id="@+id/notification"
+        android:name="ru.mirea.petukhov.a.mireaproject.notification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
 
 </navigation>

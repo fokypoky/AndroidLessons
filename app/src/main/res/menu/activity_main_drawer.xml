@@ -13,5 +13,10 @@
             android:id="@+id/dataFragment"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Data" />
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="notification"
+            />
     </group>
 </menu>
