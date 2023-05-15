@@ -27,5 +27,13 @@
             android:id="@+id/recorderFragment"
             android:title="Recorder"
             />
+        <item
+            android:id="@+id/profileFragment"
+            android:title="Profile"
+            />
+        <item
+            android:id="@+id/fileFragment"
+            android:title="File"
+            />
     </group>
 </menu>
