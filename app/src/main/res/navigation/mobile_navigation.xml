@@ -45,5 +45,10 @@
         android:name="ru.mirea.petukhov.a.mireaproject.FileFragment"
         android:label="fragment_file"
         tools:layout="@layout/fragment_file" />
+    <fragment
+        android:id="@+id/networkFragment"
+        android:name="ru.mirea.petukhov.a.mireaproject.NetworkFragment"
+        android:label="fragment_network"
+        tools:layout="@layout/fragment_network" />
 
 </navigation>

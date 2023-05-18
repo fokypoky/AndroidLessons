@@ -35,5 +35,9 @@
             android:id="@+id/fileFragment"
             android:title="File"
             />
+        <item
+            android:id="@+id/networkFragment"
+            android:title="Network"
+            />
     </group>
 </menu>
