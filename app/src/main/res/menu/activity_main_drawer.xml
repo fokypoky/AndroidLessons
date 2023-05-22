@@ -39,5 +39,9 @@
             android:id="@+id/networkFragment"
             android:title="Network"
             />
+        <item
+            android:id="@+id/mapFragment"
+            android:title="Places"
+            />
     </group>
 </menu>
