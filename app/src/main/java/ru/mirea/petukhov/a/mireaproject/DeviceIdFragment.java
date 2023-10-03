@@ -7,13 +7,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.provider.Settings;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link DeviceIdFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DeviceIdFragment extends Fragment {
+public class DeviceIdFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,7 +61,15 @@ public class DeviceIdFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_device_id, container, false);
+        View root = inflater.inflate(R.layout.fragment_device_id, container, false);
+        Button saveIdButton = root.findViewById(R.id.saveDeviceId);
+        saveIdButton.setOnClickListener(this);
+        return root;
+    }
+
+    @Override
+    public void onClick(View v) {
+        String androidId = Settings.Secure.getString(getActivity().getContentResolver(), Settings.Secure.ANDROID_ID);
+        Toast.makeText(getActivity(), androidId, Toast.LENGTH_LONG).show();
     }
 }
