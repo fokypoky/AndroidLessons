@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -65,6 +66,7 @@ public class WebViewFragment extends Fragment {
         String url = "https://www.reddit.com/";
         WebView view = (WebView) rootView.findViewById(R.id.redditWebView);
         view.getSettings().setJavaScriptEnabled(true);
+        view.setWebViewClient(new WebViewClient());
         view.loadUrl(url);
 
         return rootView;

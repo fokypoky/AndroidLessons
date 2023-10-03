@@ -6,44 +6,39 @@
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context=".DataFragment">
 
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/img"
+            />
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:src="@drawable/img"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Белуга. Рекордсмены"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="  В газете “Ульяновская правда” от 1945 года упоминание о том, что в Волге у Красного Яра ловили белугу весом 760 кг. И это не предел!"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="  Средний вес большинства особей популяции даже близко не дотягивается до рекордного веса самой крупной белуги. 11 мая 1922 года в устье Волги, в Каспийском море была поймана белуга весом 1224 килограмма!"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
-            <ImageView
-                android:id="@+id/photo1"
-                android:scaleType="centerCrop"
-                android:layout_width="350dp"
-                android:layout_height="150dp"
-                android:src="@drawable/img_1"
-                />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+            android:text="Белуга. Рекордсмены"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  В газете “Ульяновская правда” от 1945 года упоминание о том, что в Волге у Красного Яра ловили белугу весом 760 кг. И это не предел!"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Средний вес большинства особей популяции даже близко не дотягивается до рекордного веса самой крупной белуги. 11 мая 1922 года в устье Волги, в Каспийском море была поймана белуга весом 1224 килограмма!"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+        <ImageView
+            android:id="@+id/photo1"
+            android:scaleType="centerCrop"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:src="@drawable/img_1"
+            />
+    </LinearLayout>
 </FrameLayout>
