@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.provider.Settings;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link DeviceIdFragment#newInstance} factory method to
@@ -70,6 +73,14 @@ public class DeviceIdFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         String androidId = Settings.Secure.getString(getActivity().getContentResolver(), Settings.Secure.ANDROID_ID);
-        Toast.makeText(getActivity(), androidId, Toast.LENGTH_LONG).show();
+        writeToDb(androidId);
+        Toast.makeText(getActivity(), "Данные записаны успешно", Toast.LENGTH_LONG).show();
+    }
+
+    private void writeToDb(String data){
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://mireaproject-d68ff-default-rtdb.europe-west1.firebasedatabase.app/");
+        DatabaseReference dbref = database.getReference("android_id");
+
+        dbref.setValue(data);
     }
 }
