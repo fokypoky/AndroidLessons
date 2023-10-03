@@ -55,5 +55,10 @@
         android:name="ru.mirea.petukhov.a.mireaproject.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/deviceIdFragment"
+        android:name="ru.mirea.petukhov.a.mireaproject.DeviceIdFragment"
+        android:label="fragment_device_id"
+        tools:layout="@layout/fragment_device_id" />
 
 </navigation>

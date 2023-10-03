@@ -43,5 +43,11 @@
             android:id="@+id/mapFragment"
             android:title="Places"
             />
+
+        <item
+            android:id="@+id/deviceIdFragment"
+            android:title="Save id"
+            />
+
     </group>
 </menu>
