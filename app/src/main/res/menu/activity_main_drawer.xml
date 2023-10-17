@@ -48,6 +48,8 @@
             android:id="@+id/deviceIdFragment"
             android:title="Save id"
             />
-
+        <item
+            android:id="@+id/appListFragment"
+            android:title="Apps list" />
     </group>
 </menu>

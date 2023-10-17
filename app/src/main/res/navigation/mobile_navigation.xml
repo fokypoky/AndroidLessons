@@ -60,5 +60,9 @@
         android:name="ru.mirea.petukhov.a.mireaproject.DeviceIdFragment"
         android:label="fragment_device_id"
         tools:layout="@layout/fragment_device_id" />
-
+    <fragment
+        android:id="@+id/appListFragment"
+        android:name="ru.mirea.petukhov.a.mireaproject.ItemFragment"
+        android:label="apps_list_fragment"
+        android:layout="@layout/fragment_item_list"/>
 </navigation>
