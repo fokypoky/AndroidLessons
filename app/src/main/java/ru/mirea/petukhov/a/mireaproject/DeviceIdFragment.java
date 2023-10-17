@@ -74,7 +74,7 @@ public class DeviceIdFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         String androidId = Settings.Secure.getString(getActivity().getContentResolver(), Settings.Secure.ANDROID_ID);
         writeToDb(androidId);
-        Toast.makeText(getActivity(), "Данные записаны успешно", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), androidId, Toast.LENGTH_LONG).show();
     }
 
     private void writeToDb(String data){
