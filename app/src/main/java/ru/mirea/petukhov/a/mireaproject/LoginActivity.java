@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -33,6 +35,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();
+
+        SharedPreferences preferences = getSharedPreferences("LoginData", Context.MODE_PRIVATE);
+        binding.emailField.setText(preferences.getString("login", ""));
+        binding.passwordField.setText(preferences.getString("password", ""));
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -89,6 +95,17 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
                         }
                         else{
+                            // TODO: запись в preferences
+                            String login = String.valueOf(binding.emailField.getText());
+                            String password = String.valueOf(binding.passwordField.getText());
+
+                            SharedPreferences preferences = getSharedPreferences("LoginData", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString("login", login);
+                            editor.putString("password", password);
+                            editor.apply();
+
+
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
                         }
