@@ -71,4 +71,10 @@
         android:label="block_app_fragment"
         tools:layout="@layout/fragment_block_app"
         />
+
+    <fragment
+        android:id="@+id/fingerprintFragment"
+        android:name="ru.mirea.petukhov.a.mireaproject.FingerprintFragment"
+        android:label="fingerprint_fragment"
+        tools:layout="@layout/fragment_fingerprint"/>
 </navigation>
