@@ -34,9 +34,9 @@ public class Sha256Cryptor {
             blocksBinaryBuilder.append(block.toString());
         }
 
-        for(int i = 0; i < blocksBinaryBuilder.length(); i += 4){
+        for(int i = 0; i < blocksBinaryBuilder.length(); i += 8){
             StringBuilder codeBuilder = new StringBuilder();
-            for(int j = i; j < i + 4; j++){
+            for(int j = i; j < i + 8; j++){
                 codeBuilder.append(blocksBinaryBuilder.charAt(j));
             }
             asciiCodes.add(codeBuilder.toString());
