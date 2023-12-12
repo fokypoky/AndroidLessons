@@ -16,19 +16,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textEmailAddress"
             android:hint="email"
-            android:textAlignment="center"
-            />
+            android:inputType="textEmailAddress"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/passwordField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="password"
-            android:textAlignment="center"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
         <LinearLayout
             android:id="@+id/signInButtons"
             android:layout_width="match_parent"
@@ -49,5 +49,7 @@
                 android:layout_weight="1"
                 android:text="Sign Up" />
         </LinearLayout>
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

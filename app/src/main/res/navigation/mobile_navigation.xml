@@ -65,4 +65,10 @@
         android:name="ru.mirea.petukhov.a.mireaproject.ItemFragment"
         android:label="apps_list_fragment"
         android:layout="@layout/fragment_item_list"/>
+    <fragment
+        android:id="@+id/blockAppFragment"
+        android:name="ru.mirea.petukhov.a.mireaproject.BlockAppFragment"
+        android:label="block_app_fragment"
+        tools:layout="@layout/fragment_block_app"
+        />
 </navigation>

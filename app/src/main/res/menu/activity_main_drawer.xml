@@ -51,5 +51,8 @@
         <item
             android:id="@+id/appListFragment"
             android:title="Apps list" />
+        <item
+            android:id="@+id/blockAppFragment"
+            android:title="Block app"/>
     </group>
 </menu>
